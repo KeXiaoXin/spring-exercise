@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userServiceId" class="com.kxx.b_bean_factory.UserServiceImpl"></bean>
+    
+    <bean id="myAspectId" class="com.kxx.b_bean_factory.MyAspect"></bean>
+    
+    <bean id="proxyServiceId" class="org.springframework.aop.framework.ProxyFactoryBean">
+    	<property name="interfaces" value="com.kxx.b_bean_factory.UserService"></property>
+    	<property name="target" ref="userServiceId"></property>
+    	<property name="interceptorNames" value="myAspectId"></property>
+    </bean>
+</beans>

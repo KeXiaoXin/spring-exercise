@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd">
+    					
+    <bean id="collDataId" class="com.kxx.f_xml.e_coll.CollData">
+    	<property name="arrayData">
+    		<array>
+    			<value>张三</value>
+    			<value>李四</value>
+    			<value>王五</value>
+    		</array>
+    	</property>
+    	
+    	<property name="listData">
+    		<list>
+    			<value>赵六</value>
+    			<value>赵六1</value>
+    			<value>赵六2</value>
+    		</list>
+    	</property>
+    	
+    	<property name="setData">
+    		<set>
+    			<value>老刘1</value>
+    			<value>老刘2</value>
+    			<value>老刘3</value>
+    		</set>
+    	</property>
+    	
+    	<property name="mapData">
+    		<map>
+    			<entry>
+    				<key>
+    					<value>1</value>
+    				</key>
+    				<value>男</value>
+    			</entry>
+    			<entry>
+    				<key>
+    					<value>2</value>
+    				</key>
+    				<value>女</value>
+    			</entry>
+    		</map>
+    	</property>
+    	
+    	
+    	<property name="propsData">
+    		<props>
+    			<prop key="1">上</prop>
+    			<prop key="2">下</prop>
+    		</props>
+    	</property>
+    </bean>
+    
+</beans>
